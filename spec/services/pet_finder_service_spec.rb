@@ -7,14 +7,14 @@ describe PetFinderService do
     @service = PetFinderService.new
   end
 
-  describe 'dogs' do
-    it 'finds all rescue dogs' do
-      dogs = @service.dogs(gender: "F")
+  describe 'User' do
+    it 'finds all rescue dogs per zip code' do
+      dogs = @service.find_dogs("80218")
       dog  = dogs.first
 
       expect(dogs.count).to eq(20)
-      expect(dog[:first_name]).to eq('Cleveland')
-      expect(dog[:last_name]).to eq('Brown')
+      expect(dog[:name]).to eq('Sadi the Gryffindor')
+      expect(dog[:sex]).to eq('F')
     end
   end
 

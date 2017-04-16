@@ -1,0 +1,22 @@
+<h1><%= @dogs.count %> total dogs were found</h1>
+
+<% @dogs.each do |dog| %>
+  <h3>Name: <%= dog.name %></h3>
+  <p><strong>Sex:</strong> <%= dog.sex %></p>
+  <% if dog.breed.class == Array %>
+    <% dog.breed.each do |breed| %>
+      <% if breed == dog.breed[0]%>
+        <strong>Mix Breed:</strong> <%= breed[:$t] %>,
+      <% else %>
+        <%= breed[:$t] %>
+      <% end %>
+    <% end %>
+  <% else %>
+    <strong>Breed:</strong> <%= dog.breed[:$t] %>
+  <% end %>
+  <p><strong>Age:</strong> <%= dog.age %></p>
+  <img src="<%= dog.image %>" alt="">
+  <p><%= dog.description %></p>
+  <p><strong>Shelter:</strong> <%= dog.shelter %></p>
+  <hr>
+<% end %>
