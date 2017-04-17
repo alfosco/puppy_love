@@ -1,21 +1,14 @@
 require 'rails_helper'
 
-describe PetFinderService do
-  attr_reader :service
+describe 'Pet Finder Service' do
+  it 'finds all rescue dogs per zip code' do
+    dogs = PetFinderService.find_dogs_by_zip(80218)
+    dog  = dogs.first
 
-  before(:each) do
-    @service = PetFinderService.new
+    expect(dogs.count).to eq(25)
+    expect(dogs.class).to eq(Array)
+    expect(dog[:name][:$t]).to eq("Sadi the Gryffindor")
+    expect(dog[:sex][:$t]).to eq("F")
+    expect(dog[:age][:$t]).to eq("Senior")
   end
-
-  describe 'User' do
-    it 'finds all rescue dogs per zip code' do
-      dogs = @service.find_dogs("80218")
-      dog  = dogs.first
-
-      expect(dogs.count).to eq(20)
-      expect(dog[:name]).to eq('Sadi the Gryffindor')
-      expect(dog[:sex]).to eq('F')
-    end
-  end
-
 end
