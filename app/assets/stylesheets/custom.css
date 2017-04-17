@@ -1,0 +1,54 @@
+.home_background_image {
+  width: 50%;
+
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  margin: auto;
+  border-radius: 5%;
+}
+
+.search_form_header {
+  color: white;
+}
+
+.search_form {
+  width: 310px;
+  height: 100px;
+  background-color: gray;
+  opacity: 0.99;
+
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  margin: auto;
+
+  text-align: center;
+  border-radius: 2%;
+  border-color: white;
+  border-style: solid;
+  border-width: medium;
+}
+
+.dog {
+  border-color: #cccccc;
+  border-style: solid;
+  border-width: medium;
+  padding: 4px;
+  margin: 4px;
+  text-align: center;
+}
+
+.dog_image {
+  width: 15%;
+  border-radius: 5%;
+}
+
+.dog_count {
+  text-align: center;
+}
