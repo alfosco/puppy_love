@@ -36,6 +36,9 @@ gem 'jbuilder', '~> 2.5'
 gem 'faraday'
 gem 'figaro'
 
+# Google Oauth
+gem "omniauth-google-oauth2"
+
 gem 'simplecov', :require => false, :group => :test
 
 group :development, :test do
