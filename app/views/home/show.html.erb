@@ -1,6 +1,10 @@
-<h1>Find a Dog</h1>
 
-<%= form_tag search_path, :method => 'post' do %>
-  <%= text_field_tag :search, params[:search] %>
-  <%= submit_tag "Search", :name => nil %>
-<% end %>
+<img class="home_background_image" src="https://i.ytimg.com/vi/Ue4pZ5j1o50/maxresdefault.jpg" alt="">
+
+<div class="search_form">
+  <h2 class="search_form_header">Find a Dog Near You</h2>
+  <%= form_tag search_path, :method => 'post' do %>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search", :name => nil %>
+  <% end %>
+</div>

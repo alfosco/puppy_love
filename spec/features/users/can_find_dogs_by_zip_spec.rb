@@ -11,7 +11,7 @@ describe "User searches for dogs by zipcode" do
     expect(page).to have_css(".dog", count: 25)
 
     within first(".dog") do
-      expect(page).to have_content("Name: Sadi the Gryffindor")
+      expect(page).to have_content("Sadi the Gryffindor")
       expect(page).to have_content("Sex: F")
       expect(page).to have_content("Age: Senior")
       expect(page).to have_content("Mix Breed: Australian Shepherd, German Shepherd Dog")
