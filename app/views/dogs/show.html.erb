@@ -17,8 +17,12 @@
       <strong>Breed:</strong> <%= @dog.breed[:$t] %>
     <% end %>
     <p><strong>Age:</strong> <%= @dog.age %></p>
-    <p><strong>Shelter:</strong> <%= @dog.shelter %></p>
-    <p><strong>Location:</strong> <%= @dog.city %>, <%= @dog.state %></p>
     <p><%= @dog.description %></p>
+    <div class="shelter">
+      <h4><%= @shelter.name %></h4>
+      <p><strong>Location:</strong> <%= @shelter.city %>, <%= @shelter.state %>, <%= @shelter.zip %> </p>
+      <p><strong>Email:</strong> <%= @shelter.email %></p>
+      <p><strong>Phone Number:</strong> <%= @shelter.phone %></p>
+    </div>
   </div>
 </div>

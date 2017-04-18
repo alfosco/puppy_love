@@ -15,5 +15,6 @@ describe "User clicks on a dogs link" do
     expect(page).to have_content("Age: Young")
     expect(page).to have_content("Mix Breed: Doberman Pinscher, Australian Cattle Dog (Blue Heeler)")
     expect(page).to have_content("Location: Denver, CO")
+    expect(page).to have_content("Saving Dobermankind Animal Rescue")
   end
 end
