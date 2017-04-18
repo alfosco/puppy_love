@@ -19,13 +19,15 @@
   }
 
   div.dialog > div {
-    border: 1px solid #CCC;
+    border: 1px solid #ff80bf;
     border-right-color: #999;
     border-left-color: #999;
     border-bottom-color: #BBB;
-    border-top: #B00100 solid 4px;
+    border-top: #ff80bf solid 4px;
     border-top-left-radius: 9px;
     border-top-right-radius: 9px;
+    border-bottom-left-radius: 9px;
+    border-bottom-right-radius: 9px;
     background-color: white;
     padding: 7px 12% 0;
     box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
@@ -33,7 +35,7 @@
 
   h1 {
     font-size: 100%;
-    color: #730E15;
+    color: #ff80bf;
     line-height: 1.5em;
   }
 
@@ -51,6 +53,13 @@
     color: #666;
     box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
   }
+
+  .image_404 {
+    border-radius: 50%;
+    border-color: #ff80bf;
+    border-style: solid;
+    border-width: medium;
+  }
   </style>
 </head>
 
@@ -58,10 +67,13 @@
   <!-- This file lives in public/404.html -->
   <div class="dialog">
     <div>
-      <h1>The page you were looking for doesn't exist.</h1>
-      <p>You may have mistyped the address or the page may have moved.</p>
+      <h1>You do not have access to this page.</h1>
+      <p>Please go back and log in with Google.</p>
     </div>
-    <p>If you are the application owner check the logs for more information.</p>
+  </div>
+  <br>
+  <div>
+    <img class="image_404" src="https://www.lexisnexis.com/legalnewsroom/resized-image.ashx/__size/500x400/__key/telligent-evolution-components-attachments/13-12-00-00-00-00-00-89/ContentImage_2D00_MugShot.jpg" />
   </div>
 </body>
 </html>
