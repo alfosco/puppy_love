@@ -10,5 +10,5 @@ Rails.application.routes.draw do
 
   post '/search', to: 'search#index', as: 'search'
 
-  resources :dogs, only: [:index, :show]
+  resources :dogs, only: [:show]
 end

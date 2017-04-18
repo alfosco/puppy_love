@@ -70,6 +70,8 @@ body {
 
 .dog_name {
   text-align: center;
+  text-decoration: none;
+  color: #ff80bf;
 }
 
 .dog {
@@ -77,6 +79,7 @@ body {
   border-color: #ff80bf;
   border-style: solid;
   border-width: medium;
+  border-radius: 15px;
   padding: 10px;
   margin: 10px;
   color: white;
@@ -90,9 +93,20 @@ body {
 }
 
 .dog_image {
-  width: 15%;
+  width: 20%;
   border-radius: 5%;
   margin: 10px;
+  border-color: #ff80bf;
+  border-width: medium;
+  border-style: solid;
+}
+
+.dog_show_image {
+  border-radius: 5%;
+  margin: 10px;
+  border-color: #ff80bf;
+  border-width: medium;
+  border-style: solid;
 }
 
 .dog_info {

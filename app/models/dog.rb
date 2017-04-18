@@ -7,14 +7,16 @@ class Dog
               :age,
               :breed,
               :city,
-              :state
+              :state,
+              :id
 
   def initialize(dog = {})
+    @id = dog[:id][:$t]
     @name = dog[:name][:$t]
     @sex = dog[:sex][:$t]
     @description = dog[:description][:$t]
     @shelter = dog[:shelterId][:$t]
-    @image = dog[:media][:photos][:photo][0][:$t]
+    @image = dog[:media][:photos][:photo][2][:$t]
     @age = dog[:age][:$t]
     @breed = dog[:breeds][:breed]
     @city = dog[:contact][:city][:$t]
@@ -27,6 +29,11 @@ class Dog
     dogs.map do |dog|
       Dog.new(dog)
     end
+  end
+
+  def self.find_dog(id)
+    dog = PetFinderService.find_dog(id)
+    Dog.new(dog)
   end
 
 end
