@@ -2,7 +2,7 @@
 
 <% @dogs.each do |dog| %>
   <div class="dog">
-    <h3 class="dog_name"><%= dog.name %></h3>
+    <h3><%= link_to dog.name, dog_path(dog.id), class: "dog_name" %></h3>
     <div class="dog_info"
       <p><strong>Sex:</strong> <%= dog.sex %></p>
       <% if dog.breed.class == Array %>

@@ -1,0 +1,24 @@
+<br><br>
+<div class="dog">
+  <h1 class="dog_name"><%= @dog.name %></h1>
+  <img class="dog_show_image" src="<%= @dog.image %>" alt="">
+  <br>
+  <div class="dog_info"
+    <p><strong>Sex:</strong> <%= @dog.sex %></p>
+    <% if @dog.breed.class == Array %>
+      <% @dog.breed.each do |breed| %>
+        <% if breed == @dog.breed[0]%>
+          <strong>Mix Breed:</strong> <%= breed[:$t] %>,
+        <% else %>
+          <%= breed[:$t] %>
+        <% end %>
+      <% end %>
+    <% else %>
+      <strong>Breed:</strong> <%= @dog.breed[:$t] %>
+    <% end %>
+    <p><strong>Age:</strong> <%= @dog.age %></p>
+    <p><strong>Shelter:</strong> <%= @dog.shelter %></p>
+    <p><strong>Location:</strong> <%= @dog.city %>, <%= @dog.state %></p>
+    <p><%= @dog.description %></p>
+  </div>
+</div>
