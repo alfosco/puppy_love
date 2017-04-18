@@ -1,10 +1,21 @@
 
-<img class="home_background_image" src="https://i.ytimg.com/vi/Ue4pZ5j1o50/maxresdefault.jpg" alt="">
+<h1 class="home_header">Puppy Love</h1>
 
+<h3 class="home_header">Find a shelter dog near you that needs a loving home.</h3>
+<br>
 <div class="search_form">
-  <h2 class="search_form_header">Find a Dog Near You</h2>
+  <p class="search_form_header">Find a Dog Near You</p>
   <%= form_tag search_path, :method => 'post' do %>
-    <%= text_field_tag :search, params[:search] %>
+    <%= text_field_tag :search, params[:search], placeholder: "Enter Zip Code" %>
     <%= submit_tag "Search", :name => nil %>
   <% end %>
 </div>
+
+<br>
+
+<div class="home_container">
+  <img class="puppy_home_img" src="http://www.dogster.com/wp-content/uploads/2015/05/boxer-puppies-03.jpg" />
+  <img class="puppy_home_img" src="https://gfp-2a3tnpzj.stackpathdns.com/wp-content/uploads/2016/07/Irish-Setter-Puppies-For-Sale-600x600.jpg" />
+  <img class="puppy_home_img" src="https://gfp-2a3tnpzj.stackpathdns.com/wp-content/uploads/2016/07/Hunter-m1-1-600x600.jpg" />
+  <img class="puppy_home_img" src="https://gfp-2a3tnpzj.stackpathdns.com/wp-content/uploads/2016/07/English-Bulldog-Puppies-For-Sale-600x600.jpg" />
+</div

@@ -2,25 +2,25 @@
 
 <% @dogs.each do |dog| %>
   <div class="dog">
-    <h3><%= dog.name %></h3>
-    <p><strong>Sex:</strong> <%= dog.sex %></p>
-    <% if dog.breed.class == Array %>
-      <% dog.breed.each do |breed| %>
-        <% if breed == dog.breed[0]%>
-          <strong>Mix Breed:</strong> <%= breed[:$t] %>,
-        <% else %>
-          <%= breed[:$t] %>
+    <h3 class="dog_name"><%= dog.name %></h3>
+    <div class="dog_info"
+      <p><strong>Sex:</strong> <%= dog.sex %></p>
+      <% if dog.breed.class == Array %>
+        <% dog.breed.each do |breed| %>
+          <% if breed == dog.breed[0]%>
+            <strong>Mix Breed:</strong> <%= breed[:$t] %>,
+          <% else %>
+            <%= breed[:$t] %>
+          <% end %>
         <% end %>
+      <% else %>
+        <strong>Breed:</strong> <%= dog.breed[:$t] %>
       <% end %>
-    <% else %>
-      <strong>Breed:</strong> <%= dog.breed[:$t] %>
-    <% end %>
-    <p><strong>Age:</strong> <%= dog.age %></p>
+      <p><strong>Age:</strong> <%= dog.age %></p>
+      <p><strong>Shelter:</strong> <%= dog.shelter %></p>
+      <p><strong>Location:</strong> <%= dog.city %>, <%= dog.state %></p>
+    </div>
     <img class="dog_image" src="<%= dog.image %>" alt="">
-    <br><br>
-    <p><%= dog.description %></p>
-    <p><strong>Shelter:</strong> <%= dog.shelter %></p>
-    <p><strong>Location:</strong> <%= dog.city %>, <%= dog.state %></p>
   </div>
-  <hr>
+  <br>
 <% end %>
