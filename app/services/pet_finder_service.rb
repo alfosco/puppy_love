@@ -10,4 +10,9 @@ class PetFinderService
     dog = JSON.parse(response.body, symbolize_names: true)[:petfinder][:pet]
   end
 
+  def self.find_shelter(id)
+    response = Faraday.get("http://api.petfinder.com/shelter.get?format=json&key=#{Figaro.env.pet_finder_api_key}&id=#{id}")
+    shelter = JSON.parse(response.body, symbolize_names: true)[:petfinder][:shelter]
+  end
+
 end
