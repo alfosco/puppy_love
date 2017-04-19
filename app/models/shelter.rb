@@ -6,8 +6,7 @@ class Shelter
               :city,
               :state,
               :zip,
-              :longitude,
-              :latitude
+              :google_map_api_key
 
   def initialize(shelter = {})
     @id = shelter[:id][:$t]
@@ -17,12 +16,15 @@ class Shelter
     @city = shelter[:city][:$t]
     @state = shelter[:state][:$t]
     @zip = shelter[:zip][:$t]
-    @longitude = shelter[:longitude][:$t]
-    @latitude = shelter[:latitude][:$t]
+    @google_map_api_key = Figaro.env.google_map_api_key
   end
 
   def self.find_shelter(id)
     shelter = PetFinderService.find_shelter(id)
     Shelter.new(shelter)
+  end
+
+  def remove_spaces_from_name
+    name.tr(" ", "+")
   end
 end

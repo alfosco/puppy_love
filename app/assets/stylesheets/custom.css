@@ -10,6 +10,10 @@ body {
     background-image: url('/assets/pink_dust.png')
 }
 
+iframe {
+  border-radius: 15px;
+}
+
 .nav_button {
   display: inline-block;
   padding: 15px 25px;
@@ -74,6 +78,14 @@ body {
   color: #ff80bf;
 }
 
+.dog_name:hover {color: #ff3399}
+
+.dog_name_show {
+  text-align: center;
+  text-decoration: none;
+  color: #ff80bf;
+}
+
 .dog {
   width: 60%;
   border-color: #ff80bf;
@@ -95,10 +107,11 @@ body {
 .dog_image {
   width: 20%;
   border-radius: 5%;
-  margin: 10px;
+  margin: 20px;
   border-color: #ff80bf;
   border-width: medium;
   border-style: solid;
+  float: right;
 }
 
 .dog_show_image {
