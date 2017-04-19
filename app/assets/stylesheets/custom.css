@@ -18,6 +18,20 @@ iframe {
   color: #ffffff;
 }
 
+.nav_logo {
+  width: 70px;
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  background-color: #ff80bf;
+  border: none;
+  border-radius: 50%;
+}
+
 .nav_button {
   display: inline-block;
   padding: 15px 25px;
