@@ -2,7 +2,7 @@
 
 <br><br>
 <div class="dog">
-  <h1 class="dog_name"><%= @dog.name %></h1>
+  <h1 class="dog_name_show"><%= @dog.name %></h1>
   <img class="dog_show_image" src="<%= @dog.image %>" alt="">
   <br>
   <div class="dog_info"
@@ -27,4 +27,10 @@
       <p><strong>Phone Number:</strong> <%= @shelter.phone %></p>
     </div>
   </div>
+  <iframe
+  width="600"
+  height="450"
+  frameborder="0" style="border:0"
+  src="https://www.google.com/maps/embed/v1/place?key=<%= @shelter.google_map_api_key %>&q=<%= @shelter.remove_spaces_from_name %>" allowfullscreen>
+</iframe>
 </div>
