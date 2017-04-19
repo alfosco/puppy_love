@@ -14,6 +14,10 @@ iframe {
   border-radius: 15px;
 }
 
+.flash {
+  color: #ffffff;
+}
+
 .nav_button {
   display: inline-block;
   padding: 15px 25px;
