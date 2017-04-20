@@ -1,7 +1,7 @@
 require "rails_helper"
 
-RSpec.feature "User logs in" do
-  scenario "using google oauth2" do
+RSpec.feature "User logs out" do
+  scenario "clicks log out link" do
     stub_omniauth
     visit root_path
 
@@ -10,6 +10,10 @@ RSpec.feature "User logs in" do
     click_link "Sign in with Google"
     expect(page).to have_content("Alex Fosco")
     expect(page).to have_link("Sign out")
+
+    click_link "Sign out"
+    expect(page).to have_content("Logged Out")
+    expect(current_path).to eq("/")
   end
 end
 
