@@ -1,0 +1,23 @@
+<div class="nav_bar">
+  <ul class="nav_list">
+    <li class="nav_item"><%= link_to image_tag("/assets/paw_heart.png", width: '70px'), '/', class: "nav_logo" %></li>
+    <li class="nav_item">
+      <% if current_user %>
+        <div class="search_form">
+          <p class="search_form_header">Find a Dog Near You</p>
+          <%= form_tag search_path, :method => 'get' do %>
+            <%= text_field_tag :search, params[:search], placeholder: "Enter Zip Code" %>
+            <%= submit_tag "Search", :name => nil %>
+          <% end %>
+        </div>
+      <% end %>
+    </li>
+    <li style="float:right" class="nav_item">
+      <% if current_user %>
+        <%= link_to "Sign out", signout_path, id: "sign_out", class: "nav_button" %>
+      <% else %>
+        <%= link_to "Sign in with Google", "/auth/google_oauth2", id: "sign_in", class: "nav_button" %>
+      <% end %>
+    </li>
+  </ul>
+</div>

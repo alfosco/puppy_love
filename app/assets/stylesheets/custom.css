@@ -18,6 +18,21 @@ iframe {
   color: #ffffff;
 }
 
+.nav_bar {
+
+}
+
+.nav_item {
+  float: left;
+}
+
+.nav_list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
 .nav_logo {
   width: 70px;
   display: inline-block;
@@ -31,6 +46,8 @@ iframe {
   border: none;
   border-radius: 50%;
 }
+
+.nav_logo:hover {background-color: #ff3399}
 
 .nav_button {
   display: inline-block;
@@ -62,12 +79,7 @@ iframe {
   background-color: #3E3C3D;
   opacity: 0.99;
 
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-
-  margin: auto;
+  margin-left: 100%;
 
   text-align: center;
   border-radius: 15px;
