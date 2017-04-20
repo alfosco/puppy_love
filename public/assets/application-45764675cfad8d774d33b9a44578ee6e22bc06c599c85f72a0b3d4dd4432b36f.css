@@ -1,0 +1,179 @@
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Corben', cursive;
+    color: #ff80bf;
+}
+p, div {
+    font-family: 'Nobile', Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-image: url('/assets/pink_dust.png')
+}
+
+iframe {
+  border-radius: 15px;
+}
+
+.flash {
+  color: #ffffff;
+}
+
+.nav_bar {
+
+}
+
+.nav_item {
+  float: left;
+}
+
+.nav_list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.nav_logo {
+  width: 70px;
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  background-color: #ff80bf;
+  border: none;
+  border-radius: 50%;
+}
+
+.nav_logo:hover {background-color: #ff3399}
+
+.nav_button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #ff80bf;
+  border: none;
+  border-radius: 15px;
+}
+
+.nav_button:hover {background-color: #ff3399}
+
+.home_header {
+  text-align: center;
+}
+
+.search_form_header {
+  color: white;
+}
+
+.search_form {
+  width: 330px;
+  height: 100px;
+  background-color: #3E3C3D;
+  opacity: 0.99;
+
+  margin-left: 100%;
+
+  text-align: center;
+  border-radius: 15px;
+  border-color: #ff80bf;
+  border-style: solid;
+  border-width: medium;
+}
+
+.home_container {
+  white-space: nowrap;
+  text-align: center;
+}
+
+.puppy_home_img {
+  width: 20%;
+  border-radius: 50%;
+  border-color: #ff80bf;
+  border-style: solid;
+  border-width: medium;
+  margin: 15px;
+}
+
+.dog_name {
+  text-align: center;
+  text-decoration: none;
+  color: #ff80bf;
+}
+
+.dog_name:hover {color: #ff3399}
+
+.dog_name_show {
+  text-align: center;
+  text-decoration: none;
+  color: #ff80bf;
+}
+
+.dog {
+  width: 60%;
+  border-color: #ff80bf;
+  border-style: solid;
+  border-width: medium;
+  border-radius: 15px;
+  padding: 10px;
+  margin: 10px;
+  color: white;
+  background-color: #3E3C3D;
+
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: auto;
+}
+
+.dog_image {
+  width: 20%;
+  border-radius: 5%;
+  margin: 20px;
+  border-color: #ff80bf;
+  border-width: medium;
+  border-style: solid;
+  float: right;
+}
+
+.dog_show_image {
+  border-radius: 5%;
+  margin: 10px;
+  border-color: #ff80bf;
+  border-width: medium;
+  border-style: solid;
+}
+
+.dog_info {
+  float: left;
+  padding: 10px;
+  text-align: left;
+}
+
+.dog_count {
+  text-align: center;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+
