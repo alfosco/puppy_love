@@ -1,19 +1,20 @@
 require "rails_helper"
 
 describe "Dog PORO" do
-  it "returns dogs by zipcode" do
-    dogs = PetFinderService.find_dogs_by_zip(80218)
+  it "returns array of dogs" do
+    dogs = Dog.find_by_zip(80218)
 
     expect(dogs.count).to eq(25)
-    expect(dogs.first.class).to eq(Hash)
+    expect(dogs).to be_a(Array)
   end
 
   it "finds a dog by its id" do
-    dog = PetFinderService.find_dog("35702896")
+    dog = Dog.find_dog("35702896")
 
-    expect(dog.class).to eq(Hash)
-    expect(dog[:name][:$t]).to eq("Caiden")
-    expect(dog[:sex][:$t]).to eq("M")
-    expect(dog[:age][:$t]).to eq("Young")
+    expect(dog.name).to eq("Caiden")
+    expect(dog.sex).to eq("M")
+    expect(dog.age).to eq("Young")
+    expect(dog.city).to eq("Denver")
+    expect(dog.state).to eq("CO")
   end
 end

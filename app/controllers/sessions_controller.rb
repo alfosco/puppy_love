@@ -1,9 +1,9 @@
 class SessionsController < ApplicationController
   def create
-    user = User.from_omniauth(env["omniauth.auth"])
+    user = User.update_or_create(env["omniauth.auth"])
     session[:user_id] = user.id
     redirect_to root_path
-    flash[:success] = "Logged in as #{user.name}"
+    flash[:success] = "Logged in as #{user.first_name} #{user.last_name}"
   end
 
   def destroy

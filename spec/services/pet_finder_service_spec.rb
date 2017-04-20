@@ -6,7 +6,8 @@ describe 'Pet Finder Service' do
     dog  = dogs.first
 
     expect(dogs.count).to eq(25)
-    expect(dogs.class).to eq(Array)
+    expect(dogs).to be_a(Array)
+    
     expect(dog[:name][:$t]).to eq("Sadi the Gryffindor")
     expect(dog[:sex][:$t]).to eq("F")
     expect(dog[:age][:$t]).to eq("Senior")
