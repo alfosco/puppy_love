@@ -8,7 +8,7 @@ Rails.application.routes.draw do
 
   root to: "home#show"
 
-  post '/search', to: 'search#index', as: 'search'
+  get '/search', to: 'search#index', as: 'search'
 
   resources :dogs, only: [:show]
 end
