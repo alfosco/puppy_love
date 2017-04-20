@@ -5,8 +5,8 @@ RSpec.feature "User searches for dogs by zipcode" do
     stub_omniauth
     visit root_path
     click_link "Sign in with Google"
-    
-    fill_in :search, with: "80218"
+
+    fill_in :search, with: "76543"
     click_on "Search"
 
     expect(current_path).to eq("/search")
@@ -14,11 +14,11 @@ RSpec.feature "User searches for dogs by zipcode" do
     expect(page).to have_css(".dog", count: 25)
 
     within first(".dog") do
-      expect(page).to have_content("Sadi the Gryffindor")
-      expect(page).to have_content("Sex: F")
-      expect(page).to have_content("Age: Senior")
-      expect(page).to have_content("Mix Breed: Australian Shepherd, German Shepherd Dog")
-      expect(page).to have_content("Location: Denver, CO")
+      expect(page).to have_content("VOUCH")
+      expect(page).to have_content("Sex: M")
+      expect(page).to have_content("Age: Young")
+      expect(page).to have_content("Mix Breed: German Shepherd Dog, Mixed Breed")
+      expect(page).to have_content("Location: Killeen, TX")
     end
   end
 

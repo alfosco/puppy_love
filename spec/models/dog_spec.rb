@@ -2,7 +2,7 @@ require "rails_helper"
 
 describe "Dog PORO" do
   it "returns array of dogs" do
-    dogs = Dog.find_by_zip(80218)
+    dogs = Dog.find_by_zip(76543)
 
     expect(dogs.count).to eq(25)
     expect(dogs).to be_a(Array)
