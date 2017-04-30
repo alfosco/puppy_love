@@ -1,24 +1,5 @@
-# README
+# Puppy Love
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Puppy Love is a Ruby-on-Rails application that connects users to shelter dogs close to them that are in need of a loving home. It uses Google OAuth to authenticate users. It consumes the PetFinder API to provide information on shelter dogs to users. It also uses the Google Maps API to display the location of the shelters the dogs are located at.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+It can be used live on Heroku [here](https://pup-love.herokuapp.com/)
